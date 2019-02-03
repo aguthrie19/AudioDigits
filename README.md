@@ -12,4 +12,6 @@ Instructions for local use <br />
 * `set FLASK_APP=./webapp.py`
 * `flask run`
 
-Note: ignore the ".idea" directory unless you want it for development in pycharm
+Note:<br />
+* The "documents" directory contains prior research that inspired the project. The directory can be ignored.
+* Ignore the ".idea" directory unless you want it for development in pycharm.
