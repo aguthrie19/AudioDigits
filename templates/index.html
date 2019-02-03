@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="UTF-8">
+      <title>Audio Digits</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style/main.css') }}">
+      <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+      <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+  </head>
+  <body>
+    <h1>Audio Digits</h1>
+    <p>
+        An interactive speech recognition web app that teaches you to train a machine learning model and recognize spoken digits.
+    </p>
+    <div id="controls">
+        <button class='control' id="recordButton">Record</button>
+        <button class='control' id="stopButton" disabled>Stop</button>
+        <button class='control' id="trainButton">Train</button>
+    </div>
+    <div id="capable">Start a recording to see the sample rate set by your browser and machine...</div>
+    <div id="results">
+        <b>Model Accuracy</b>
+        <br />
+        <p id="accuracy"> Train your model first...</p>
+    </div>
+    <h3>Recordings: </h3> <p>each <1 second</p>
+  	<ol id="recordingsList"></ol>
+
+    <div id="footer">Voice recording possible by <a href="https://addpipe.com/blog/using-recorder-js-to-capture-wav-audio-in-your-html5-web-site/" target="_blank">Matt Diamond's Recorder.js</a>.</div>
+    <!-- inserting these scripts at the end to be able to use all the elements in the DOM -->
+    <!--
+    <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
+  	<script src="js/app.js"></script>
+  	-->
+    <script src="{{ url_for('static', filename='scripts/jquery-3.3.1.js') }}"> </script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='scripts/recapp.js') }}"></script>
+
+    <!--
+    <script type="text/javascript" src="{{ url_for('static', filename='scripts/webapp.js') }}"></script>
+    -->
+  </body>
+</html>
